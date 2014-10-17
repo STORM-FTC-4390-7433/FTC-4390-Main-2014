@@ -1,10 +1,12 @@
-#ifndef DRIVESYS_H
-#define DRIVESYS_H
+#ifndef GATESYS_H
+#define GATESYS_H
 
 typedef struct {
 
-	tMotor driveR,
-	driveL;
-}DriveSys;
+
+	TServoIndex gate;
+
+
+} GateSys;
 
 #endif

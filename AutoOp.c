@@ -45,14 +45,8 @@ task main() {
 	waitForStart();
 	#endif
 
-	while(true)
-  	{
-       getJoystickSettings(joystick);
+	updateDriveSys (drive, 100, 100);
+	wait1Msec(10000);
+	updateDriveSys (drive, 0, 0);
 
-       updateDriveSys (drive, joystick.joy1_y1*(100/128), joystick.joy1_y1*(100/128));
-       updateLiftSys (lift, joy2Btn(8), joy2Btn(7));
-       updateIntakeSys (intake, joy1Btn(8), joy1Btn(7));
-       updateGateSys (gate, joy2Btn(6), joy2Btn(5));
-
-    }
 }
