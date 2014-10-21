@@ -3,7 +3,10 @@
 
 typedef struct {
 
-	tServo gateMotor,
-}GateSys;
+
+	TServoIndex gate;
+
+
+} GateSys;
 
 #endif

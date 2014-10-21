@@ -3,7 +3,7 @@
 
 typedef struct {
 
-	tMotor intakeMotor,
+	tMotor intakeMotor;
 }IntakeSys;
 
 #endif

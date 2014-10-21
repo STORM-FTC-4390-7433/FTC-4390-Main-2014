@@ -15,24 +15,24 @@
 #include "JoystickDriver.c"
 #include "drive.h"
 #include "drive.c"
-#include "lift.h"
-#include "lift.c"
+//#include "lift.h"
+//#include "lift.c"
 #include "intake.h"
 #include "intake.c"
-#include "gate.h"
-#include "gate.c"
+//#include "gate.h"
+//#include "gate.c"
 
 DriveSys drive;
-LiftSys lift;
+//LiftSys lift;
 IntakeSys intake;
-GateSys gate;
+//GateSys gate;
 
 void initializeRobot(){
 	drive.BackLeft = backLeft;
 	drive.BackRight = backRight;
-	gate.gate = gateServo;
-	lift.lift = liftMotor;
-	intake.intake = intakeMotor;
+	//gate.gate = gateervo;
+	//lift.lift = liftMotor;
+	intake.intakeMotor = intakeMotor;
 
 	return;
 }
@@ -45,8 +45,8 @@ task main() {
 	waitForStart();
 	#endif
 
-	updateDriveSys (drive, 100, 100);
-	wait1Msec(10000);
-	updateDriveSys (drive, 0, 0);
+	updateDriveSys(drive, 100, 100);
+	wait1Msec(3000);
+	updateDriveSys(drive, 0, 0);
 
 }
